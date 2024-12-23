@@ -1,0 +1,204 @@
+.cabecalho{
+    background-color: var(--cor-branco-texto-e-fundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.cabecalho__menu-hamburguer{
+    width: 40px;
+    height: 40px;
+    background-image: url(../imagens/menu-bg.svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.container__botao__menu:checked ~ .container__rotulo > .cabecalho__menu-hamburguer{
+    background-image: url(../imagens/menu_white.svg);
+}
+
+.container__botao__menu:checked ~ .container__rotulo{
+    background: var(--azul-gradiente);
+}
+
+.cabecalho__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem
+}
+
+.cabecalho__container__titulo{
+    display: none;
+}
+
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding-left: 1rem;
+}
+
+.container__botao__menu:checked ~ .lista-menu{
+    display: block;
+}
+
+.container__botao__menu{
+    display: none;
+}
+
+.lista-menu__titulo, .lista-menu__item{
+    list-style: none;
+    background-color: var(--cor-branco-texto-e-fundo);
+    padding: 1rem 5rem;
+}
+
+.lista-menu__titulo{
+    color: var(--cor-fundo-botao);
+    font-family: var(--fonte-principal);
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.lista-menu__link{
+    text-decoration: none;
+    color: var(--azul-gradiente);
+    font-family: var(--fonte-principal);
+    text-transform: uppercase;
+    padding-left: 1rem;
+}
+
+.menu-tablet{
+    display: none;
+}
+
+.icone-descricao{
+    display: none;
+}
+
+.logo_menu{
+    margin-left: 0.5rem;
+}
+
+@media screen and (min-width: 920px) {
+
+    .cabecalho__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .cabecalho__container__titulo, .titulo-negrito{
+        display: inline-flex;
+        font-family: var(--fonte-secundaria);
+        font-size: 1.875rem;
+        font-weight: 400;
+    }
+
+    .titulo-negrito{
+        font-weight: 700;
+    }
+
+    .container__botao__menu, .cabecalho__menu-hamburguer,.menu, .lista-menu{
+        display: none;
+    }
+
+    .menu-tablet{
+        display: flex;
+    }
+
+    .menu__lista__categorias__checkbox:checked ~ .menu__lista__categorias > .menu-tablet__lista__item{
+        background-color: var(--cor-azul-secundario);
+        color: var(--cor-branco-texto-e-fundo);
+        padding: 1rem;
+    }
+
+    .lista-menu__item:hover{
+        background-color: var(--cor-azul-secundario);
+        color: var(--cor-branco-texto-e-fundo);
+    }
+
+    .menu-tablet__lista{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        gap: 1.5rem;
+    }
+
+    .menu-tablet__lista__item{
+        color: var(--cor-preto);
+        font-family: var(--fonte-principal);
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .menu-tablet__lista__link{
+        text-decoration: none;
+        color: var(--cor-preto);
+        font-family: var(--fonte-principal);
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .menu__lista__categorias__links{
+        display: none;
+        position: absolute;
+        top: 100%;
+    }
+
+    .menu__lista__categorias__checkbox{
+        display: none;
+    }
+
+    .menu__lista__categorias__checkbox:checked ~ .menu__lista__categorias__links{
+        display: block;
+        width: auto;
+    }
+
+    .lista-menu__item{
+        padding-left: 1rem;
+    }
+
+    .icone-favorito{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1201px){
+
+    .cabecalho__container{
+        padding: 1rem 3rem;
+    }
+
+    .cabecalho__desktop-left{
+        margin-right: auto;
+    }
+
+    .cabecalho__desktop-right{
+        margin-left: auto;
+    }
+
+    .menu-tablet__lista{
+        padding-left: 2rem;
+    }
+
+    .icone-descricao{
+        display: inline-flex;
+    }
+
+    .menu-icone__link{
+        text-decoration: none;
+        font-family: var(--fonte-principal);
+        color: var(--cor-preto);
+        display: flex;
+        align-items: center;
+    }
+
+}

@@ -1,0 +1,83 @@
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-branco-texto-e-fundo);
+    font-family: var(--fonte-principal);
+    color: var(--cor-azul-secundario);
+    text-align: left;
+    padding: 1.5rem 2rem;
+}
+
+.newsletter__titulo{
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.newsletter__texto{
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+.newsletter__input{
+    width: 100%;
+    border-radius: 1.5rem;
+    border: 1px solid var(--cor-azul-secundario);
+    padding: 1rem;
+}
+
+.newsletter__input::placeholder{
+    font-family: var(--fonte-principal);
+    color: var(--cor-azul-secundario);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 3rem;
+    background: url(../imagens/Email.svg);
+    background-repeat: no-repeat;
+    background-position: 1rem;
+}
+
+@media screen and (min-width: 920px) {
+    .newsletter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 5rem;
+        gap: 3rem;
+    }
+
+    .newsletter__conteudo, .newsletter__email{
+        width: 50%;
+    }
+
+    .newsletter__titulo{
+        font-size: 1.5rem;
+    }
+
+    .newsletter__input{
+        width: 100%;
+        border-radius: 1.5rem;
+        border: 1px solid var(--cor-azul-secundario);
+        padding: 1rem;
+    }
+
+    .newsletter__input::placeholder{
+        background-position: 3rem;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .newsletter{
+        padding: 3rem 25%;
+    }
+
+    .newsletter__input::placeholder{
+        background-position: 0.5rem;
+    }
+    
+}
